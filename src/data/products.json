@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Zip Tote Basket",
+    "color": "White and black",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
+    "imageAlt": "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
+    "price": "$140"
+  },
+  {
+    "id": 2,
+    "name": "Striped T-Shirt",
+    "color": "Blue and white",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    "imageAlt": "Front of blue and white striped t-shirt.",
+    "price": "$25"
+  },
+  {
+    "id": 3,
+    "name": "Canvas Shoes",
+    "color": "Gray",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
+    "imageAlt": "Pair of gray canvas shoes.",
+    "price": "$60"
+  },
+  {
+    "id": 4,
+    "name": "Denim Jacket",
+    "color": "Blue",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-02.jpg",
+    "imageAlt": "Front of blue denim jacket.",
+    "price": "$90"
+  },
+  {
+    "id": 5,
+    "name": "Leather Belt",
+    "color": "Brown",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-01.jpg",
+    "imageAlt": "Brown leather belt with silver buckle.",
+    "price": "$35"
+  },
+  {
+    "id": 6,
+    "name": "Floral Dress",
+    "color": "Yellow and pink",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-02.jpg",
+    "imageAlt": "Yellow and pink floral dress.",
+    "price": "$120"
+  },
+  {
+    "id": 7,
+    "name": "Sunglasses",
+    "color": "Black",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-03.jpg",
+    "imageAlt": "Black sunglasses with dark lenses.",
+    "price": "$50"
+  },
+  {
+    "id": 8,
+    "name": "Classic Watch",
+    "color": "Silver",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
+    "imageAlt": "Silver watch with black dial and leather strap.",
+    "price": "$180"
+  },
+  {
+    "id": 9,
+    "name": "Hooded Sweatshirt",
+    "color": "Gray",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-03.jpg",
+    "imageAlt": "Gray hooded sweatshirt.",
+    "price": "$70"
+  },
+  {
+    "id": 10,
+    "name": "Backpack",
+    "color": "Black",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+    "imageAlt": "Black backpack with multiple compartments.",
+    "price": "$100"
+  },
+  {
+    "id": 11,
+    "name": "Running Shoes",
+    "color": "Blue and white",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-05.jpg",
+    "imageAlt": "Pair of blue and white running shoes.",
+    "price": "$80"
+  },
+  {
+    "id": 12,
+    "name": "Striped Polo Shirt",
+    "color": "Red and white",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-04.jpg",
+    "imageAlt": "Front of red and white striped polo shirt.",
+    "price": "$45"
+  },
+  {
+    "id": 13,
+    "name": "Leather Wallet",
+    "color": "Brown",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-06.jpg",
+    "imageAlt": "Brown leather wallet with multiple card slots.",
+    "price": "$50"
+  },
+  {
+    "id": 14,
+    "name": "Puffer Jacket",
+    "color": "Black",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-07.jpg",
+    "imageAlt": "Front of black puffer jacket.",
+    "price": "$110"
+  },
+  {
+    "id": 15,
+    "name": "Casual Shirt",
+    "color": "Blue",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-05-product-08.jpg",
+    "imageAlt": "Front of blue casual shirt.",
+    "price": "$55"
+  },
+  {
+    "id": 16,
+    "name": "Canvas Backpack",
+    "color": "Green",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-03.jpg",
+    "imageAlt": "Green canvas backpack with brown leather accents.",
+    "price": "$75"
+  },
+  {
+    "id": 17,
+    "name": "Hiking Boots",
+    "color": "Brown",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-01.jpg",
+    "imageAlt": "Pair of brown hiking boots.",
+    "price": "$95"
+  },
+  {
+    "id": 18,
+    "name": "Denim Jeans",
+    "color": "Dark blue",
+    "href": "#",
+    "imageSrc": "https://tailwindui.com/img/ecommerce-images/order-history-page-03-product-02.jpg",
+    "imageAlt": "Dark blue denim jeans.",
+    "price": "$65"
+  }
+]

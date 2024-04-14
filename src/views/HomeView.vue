@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import productLists from '../components/productLists/index.vue'
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <productLists />
+  </main>
 </template>
