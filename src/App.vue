@@ -8,15 +8,6 @@ import { useCartStore } from '@/stores/CartStore'
 const cartStore = useCartStore()
 const productStore = useProductStore()
 productStore.fill()
-
-const addToCart = (count, product) => {
-  count = parseInt(count)
-  console.log(count)
-
-  for (let index = 0; index < count; index++) {
-    cartStore.items.push(product)
-  }
-}
 </script>
 
 <template>
@@ -33,7 +24,7 @@ const addToCart = (count, product) => {
             v-for="(product, index) in productStore.products"
             :key="index"
             :product="product"
-            @addToCart="addToCart($event, product)"
+            @addToCart="cartStore.addItems($event, product)"
           />
         </div>
       </div>

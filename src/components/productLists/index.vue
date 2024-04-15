@@ -5,12 +5,22 @@ import AppCountInput from '@/components/AppCountInput.vue'
 const props = defineProps({
   product: []
 })
-const product = props.product
+interface Product {
+  id: number
+  name: string
+  color: string
+  href: string
+  imageSrc: string
+  imageAlt: string
+  price: string
+}
+const product: Product = props.product
 
 const emits = defineEmits(['addToCart'])
 const count = ref(0)
 const addToCart = () => {
-  emits('addToCart', count), (count.value = 0)
+  emits('addToCart', count.value)
+  count.value = 0
 }
 </script>
 

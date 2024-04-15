@@ -4,10 +4,13 @@ export const useCartStore = defineStore('CartStore', {
     return {
       items: []
     }
+  },
+  actions: {
+    addItems(count: number, items: []) {
+      count = parseInt(String(count))
+      for (let index = 0; index < count; index++) {
+        this.items.push({ ...items })
+      }
+    }
   }
-  // actions: {
-  //     addToCart(product) {
-  //         this.cart.push(product)
-  //     }
-  // }
 })

@@ -1,9 +1,12 @@
 <script setup lang="ts">
 const props = defineProps({
-  modelValue: { type: [Number, String], default: 0 }
+  modelValue: {
+    type: Number,
+    default: 0
+  }
 })
 const emit = defineEmits(['update:modelValue', 'input'])
-const updateValue = (value) => emit('update:modelValue', value)
+const updateValue = (value: Number | null) => emit('update:modelValue', value)
 </script>
 <template>
   <div class="flex justify-center mt-6">
