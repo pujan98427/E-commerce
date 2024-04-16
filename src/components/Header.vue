@@ -322,7 +322,7 @@ const navigation = {
                   <h2 class="sr-only">Shopping Cart</h2>
 
                   <div class="mt-8">
-                    <div class="flow-root">
+                    <div class="flow-root" v-if="cartStore.count > 0">
                       <ul role="list" class="-my-6 divide-y divide-gray-200">
                         <li v-for="product in products" :key="product.id" class="flex py-6">
                           <div
@@ -360,6 +360,35 @@ const navigation = {
                           </div>
                         </li>
                       </ul>
+                      <div class="border-t border-gray-200 mt-6 pt-6">
+                        <div class="flex justify-between text-base font-medium text-gray-900">
+                          <p>Subtotal</p>
+                          <p>$262.00</p>
+                        </div>
+
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                            >Checkout</a
+                          >
+                        </div>
+                        <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                          <p>
+                            or{{ ' ' }}
+                            <button
+                              type="button"
+                              class="font-medium text-indigo-600 hover:text-indigo-500"
+                            >
+                              View Shopping Bag
+                              <span aria-hidden="true"> &rarr;</span>
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="" v-else>
+                      <em>Cart is Empty</em>
                     </div>
                   </div>
                 </PopoverPanel>
