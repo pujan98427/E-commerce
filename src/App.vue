@@ -5,6 +5,7 @@ import ProductList from '@/components/productLists/index.vue'
 import Header from '@/components/Header.vue'
 import { useProductStore } from '@/stores/ProductStore'
 import { useCartStore } from '@/stores/CartStore'
+import Footer from '@/components/productLists/Footer.vue'
 const cartStore = useCartStore()
 const productStore = useProductStore()
 productStore.fill()
@@ -30,6 +31,7 @@ productStore.fill()
       </div>
     </div>
   </main>
+  <Footer />
 
   <RouterView />
 </template>
