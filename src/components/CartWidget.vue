@@ -64,13 +64,13 @@ const open = ref(true)
         <div class="mt-8">
           <div class="flow-root" v-if="!cartStore.isEmpty">
             <ul role="list" class="-my-6 divide-y divide-gray-200">
-              <li v-for="product in products" :key="product.id" class="flex py-6">
+              <li v-for="(product, name) in cartStore.grouped" :key="name" class="flex py-6">
                 <div
                   class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-gray-200"
                 >
                   <img
-                    :src="product.imageSrc"
-                    :alt="product.imageAlt"
+                    :src="product[0].imageSrc"
+                    :alt="product[0].imageAlt"
                     class="h-full w-full object-cover object-center"
                   />
                 </div>
@@ -79,14 +79,14 @@ const open = ref(true)
                   <div>
                     <div class="flex justify-between text-base font-medium text-gray-900">
                       <h3>
-                        <a :href="product.href">{{ product.name }}</a>
+                        <a :href="product[0].href">{{ product[0].name }}</a>
                       </h3>
-                      <p class="ml-4">{{ product.price }}</p>
+                      <p class="ml-4">{{ product[0].price }}</p>
                     </div>
-                    <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
+                    <p class="mt-1 text-sm text-gray-500">{{ product[0].color }}</p>
                   </div>
                   <div class="flex flex-1 items-end justify-between text-sm">
-                    <AppCountInput v-model="count" />
+                    <AppCountInput v-model="product.count" />
 
                     <div class="flex">
                       <button
@@ -106,21 +106,19 @@ const open = ref(true)
                 <p>$262.00</p>
               </div>
 
-              <div class="mt-6">
+              <div class="flex items-center gap-4 mt-6">
                 <a
                   href="#"
-                  class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  class="flex-1 text-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >Checkout</a
                 >
-              </div>
-              <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
-                <p>
-                  or{{ ' ' }}
-                  <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
-                    View Shopping Bag
-                    <span aria-hidden="true"> &rarr;</span>
-                  </button>
-                </p>
+
+                <button
+                  class="relative flex w-full items-center justify-center rounded-md border border-transparent bg-gray-100 px-6 py-3 text-base font-medium text-gray-900 hover:bg-gray-200"
+                  @click="cartStore.$reset()"
+                >
+                  clear
+                </button>
               </div>
             </div>
           </div>
