@@ -51,10 +51,10 @@ const cartStore = useCartStore()
               <div class="border-t border-gray-200 my-6"></div>
 
               <div class="flex items-center gap-4">
-                <a
-                  href="#"
+                <Button
                   class="flex-1 text-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                  >Checkout</a
+                  @click="cartStore.checkout"
+                  >Checkout</Button
                 >
 
                 <button
