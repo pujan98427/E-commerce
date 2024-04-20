@@ -6,7 +6,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-1.jpg",
     "imageAlt": "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
-    "price": "$140"
+    "price": "140"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-2.jpg",
     "imageAlt": "Front of blue and white striped t-shirt.",
-    "price": "$25"
+    "price": "25"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-3.jpg",
     "imageAlt": "Pair of gray canvas shoes.",
-    "price": "$60"
+    "price": "60"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-4.jpg",
     "imageAlt": "Front of blue denim jacket.",
-    "price": "$90"
+    "price": "90"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-5.jpg",
     "imageAlt": "Brown leather belt with silver buckle.",
-    "price": "$35"
+    "price": "35"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-6.jpg",
     "imageAlt": "Yellow and pink floral dress.",
-    "price": "$120"
+    "price": "120"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-7.jpg",
     "imageAlt": "Black sunglasses with dark lenses.",
-    "price": "$50"
+    "price": "50"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-8.jpg",
     "imageAlt": "Silver watch with black dial and leather strap.",
-    "price": "$180"
+    "price": "180"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-9.jpg",
     "imageAlt": "Gray hooded sweatshirt.",
-    "price": "$70"
+    "price": "70"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-10.jpg",
     "imageAlt": "Black backpack with multiple compartments.",
-    "price": "$100"
+    "price": "100"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-11.jpg",
     "imageAlt": "Pair of blue and white running shoes.",
-    "price": "$80"
+    "price": "80"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-12.jpg",
     "imageAlt": "Front of red and white striped polo shirt.",
-    "price": "$45"
+    "price": "45"
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-13.jpg",
     "imageAlt": "Brown leather wallet with multiple card slots.",
-    "price": "$50"
+    "price": "50"
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-14.jpg",
     "imageAlt": "Front of black puffer jacket.",
-    "price": "$110"
+    "price": "110"
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-15.jpg",
     "imageAlt": "Front of blue casual shirt.",
-    "price": "$55"
+    "price": "55"
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-16.jpg",
     "imageAlt": "Green canvas backpack with brown leather accents.",
-    "price": "$75"
+    "price": "75"
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "href": "#",
     "imageSrc": "/images/products/product-17.jpg",
     "imageAlt": "Pair of brown hiking boots.",
-    "price": "$95"
+    "price": "95"
   },
   {
     "id": 18,
@@ -159,6 +159,6 @@
     "href": "#",
     "imageSrc": "/images/products/product-18.jpg",
     "imageAlt": "Dark blue denim jeans.",
-    "price": "$65"
+    "price": "65"
   }
 ]

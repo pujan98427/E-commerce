@@ -65,6 +65,7 @@ const open = ref(true)
           <div class="flow-root" v-if="!cartStore.isEmpty">
             <ul role="list" class="-my-6 divide-y divide-gray-200">
               <li v-for="(product, name) in cartStore.grouped" :key="name" class="flex py-6">
+                {{ product.id }}
                 <div
                   class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-gray-200"
                 >
@@ -92,6 +93,7 @@ const open = ref(true)
                       <button
                         type="button"
                         class="font-medium text-indigo-600 hover:text-indigo-500"
+                        @click="cartStore.removeItem(product[0].id)"
                       >
                         Remove
                       </button>
@@ -103,7 +105,7 @@ const open = ref(true)
             <div class="border-t border-gray-200 mt-6 pt-6">
               <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal</p>
-                <p>$262.00</p>
+                <p>${{ cartStore.totalCost }}</p>
               </div>
 
               <div class="flex items-center gap-4 mt-6">

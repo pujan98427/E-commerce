@@ -44,7 +44,7 @@ const addToCart = () => {
       <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
     </div>
     <div class="mt-4 text-center">
-      <p class="relative text-lg font-semibold text-black">{{ product.price }}</p>
+      <p class="relative text-lg font-semibold text-black">${{ product.price }}</p>
     </div>
     <AppCountInput v-model="count" />
 
