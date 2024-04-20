@@ -20,7 +20,6 @@ const emits = defineEmits(['addToCart'])
 const count = ref(0)
 const addToCart = () => {
   emits('addToCart', count.value)
-  count.value = 0
 }
 </script>
 

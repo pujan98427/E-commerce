@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import MagnifyingGlassSvg from './icons/MagnifyingGlassSvg.vue'
 import { useCartStore } from '@/stores/CartStore'
-import CartWidget from './CartWidget.vue'
+import CartWidget from '@/components/cart/CartWidget.vue'
 
 const navigation = {
   categories: [

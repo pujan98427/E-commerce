@@ -6,7 +6,11 @@ const props = defineProps({
   }
 })
 const emit = defineEmits(['update:modelValue', 'input'])
-const updateValue = (value: Number | null) => emit('update:modelValue', value)
+const updateValue = (value: Number | null) => {
+  if (value !== '') {
+    emit('update:modelValue', value)
+  }
+}
 </script>
 <template>
   <div class="flex justify-center mt-6">
@@ -19,7 +23,7 @@ const updateValue = (value: Number | null) => emit('update:modelValue', value)
     <input
       :value="modelValue"
       min="0"
-      @input="updateValue"
+      @input="updateValue($event.target.value)"
       type="number"
       readonly
       class="max-w-12"
