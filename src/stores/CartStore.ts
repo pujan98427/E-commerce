@@ -1,16 +1,18 @@
 import { defineStore } from 'pinia'
 import { groupBy } from 'lodash'
 import { useAuthUserStore } from './AuthUser'
+import type { CartItem, CartState } from '../types/CategoryTypes'
 
 export const useCartStore = defineStore('CartStore', {
-  state: () => {
+  state: (): CartState => {
     return {
-      items: []
+      items: [],
+      count: 0
     }
   },
   getters: {
-    count: (state) => state.items.length,
-    isEmpty: (state) => state.count === 0,
+    count: (state): number => state.items.length,
+    isEmpty: (state): boolean => state.count === 0,
     grouped: (state) => {
       const grouped = groupBy(state.items, (item) => item.name)
       const sorted = Object.keys(grouped).sort()
@@ -18,8 +20,8 @@ export const useCartStore = defineStore('CartStore', {
       sorted.forEach((key) => (inOrder[key] = grouped[key]))
       return inOrder
     },
-    groupCount: (state) => (name) => state.grouped[name].length,
-    totalCost: (state) => state.items.reduce((p, c) => p + parseInt(c.price), 0)
+    groupCount: (state) => (name: string) => state.grouped[name].length,
+    totalCost: (state): number => state.items.reduce((p, c) => p + parseInt(c.price), 0)
   },
 
   actions: {
@@ -29,16 +31,16 @@ export const useCartStore = defineStore('CartStore', {
         `${authUserStore.username} just brought ${this.count} items at a total of $${this.totalCost}`
       )
     },
-    addItems(count: number, items: []) {
+    addItems(count: number, items: CartItem[]) {
       count = parseInt(String(count))
       for (let index = 0; index < count; index++) {
         this.items.push({ ...items })
       }
     },
-    removeItem(productId) {
+    removeItem(productId: string) {
       this.items = this.items.filter((item) => item.id !== productId)
     },
-    setItemCount(item, count) {
+    setItemCount(item: CartItem, count: number) {
       this.removeItem(item.id)
       this.addItems(count, item)
     }
