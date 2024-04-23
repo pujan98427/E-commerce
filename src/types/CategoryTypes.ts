@@ -13,4 +13,4 @@ interface CartState {
   count: number
 }
 
-export { CartItem, CartState }
+export type { CartItem, CartState }
