@@ -82,7 +82,7 @@ const navigation = {
 </script>
 
 <template>
-  <header class="relative bg-white shadow-sm">
+  <header class="relative bg-white shadow-sm sticky top-0 z-50">
     <nav aria-label="Top" class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="px-4 pb-14 sm:px-0 sm:pb-0">
         <div class="flex h-16 items-center justify-between">

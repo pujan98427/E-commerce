@@ -1,4 +1,5 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
+import { useLocalStorage } from '@vueuse/core'
 import { groupBy } from 'lodash'
 import { useAuthUserStore } from './AuthUser'
 import type { CartItem, CartState } from '../types/CategoryTypes'
@@ -6,7 +7,7 @@ import type { CartItem, CartState } from '../types/CategoryTypes'
 export const useCartStore = defineStore('CartStore', {
   state: (): CartState => {
     return {
-      items: [],
+      items: useLocalStorage('cartStore:items', []),
       count: 0
     }
   },

@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
 const year = ref(new Date().getFullYear())
-import FacebookSvg from '../icons/FacebookSvg.vue'
-import InstagramSvg from '../icons/InstagramSvg.vue'
-import LinkedinSvg from '../icons/linkedinSvg.vue'
+import FacebookSvg from '@/components/icons/FacebookSvg.vue'
+import InstagramSvg from '@/components/icons/InstagramSvg.vue'
+import LinkedinSvg from '@/components/icons/linkedinSvg.vue'
 const navigation = ref({
   social: [
     {
