@@ -59,7 +59,7 @@ const cartStore = useCartStore()
 
                 <button
                   class="relative flex w-full items-center justify-center rounded-md border border-transparent bg-gray-100 px-6 py-3 text-base font-medium text-gray-900 hover:bg-gray-200"
-                  @click="cartStore.resetLocalStorage"
+                  @click="cartStore.resetItems"
                 >
                   clear
                 </button>
