@@ -1,13 +1,26 @@
 import { defineStore } from 'pinia'
+
 export const useProductStore = defineStore('ProductStore', {
-  state: () => {
-    return {
-      products: []
-    }
-  },
+  state: () => ({
+    products: [],
+    filterText: ''
+  }),
   actions: {
     async fill() {
-      this.products = (await import('@/data/products.json')).default
+      const productData = (await import('@/data/products.json')).default
+      if (this.filterText == '') {
+        this.products = productData
+      } else {
+        this.showAllButtton = true
+        const filteredProducts = productData.filter((product) =>
+          product.name.toLowerCase().includes(this.filterText.toLowerCase())
+        )
+        this.products = filteredProducts
+      }
+    },
+    filterReceivedText(newText: string) {
+      this.filterText = newText
+      this.fill() // Call the fill method whenever filterText changes
     }
   }
 })

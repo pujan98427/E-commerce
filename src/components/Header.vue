@@ -4,6 +4,7 @@ import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/
 import MagnifyingGlassSvg from './icons/MagnifyingGlassSvg.vue'
 import { useCartStore } from '@/stores/CartStore'
 import CartWidget from '@/components/cart/CartWidget.vue'
+import SearchField from './SearchField.vue'
 
 const navigation = {
   categories: [
@@ -252,10 +253,7 @@ const navigation = {
 
           <div class="flex flex-1 items-center justify-end">
             <!-- Search -->
-            <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
-              <span class="sr-only">Search</span>
-              <MagnifyingGlassSvg class="h-6 w-6" aria-hidden="true" />
-            </a>
+            <SearchField />
 
             <!-- Cart -->
             <CartWidget />

@@ -9,6 +9,10 @@ import Footer from '@/components/Footer.vue'
 const cartStore = useCartStore()
 const productStore = useProductStore()
 productStore.fill()
+function showAll() {
+  productStore.filterText = ''
+  productStore.fill()
+}
 </script>
 
 <template>
@@ -27,6 +31,14 @@ productStore.fill()
             :product="product"
             @addToCart="cartStore.addItems($event, product)"
           />
+        </div>
+        <div class="text-center" v-if="productStore.filterText !== ''">
+          <button
+            class="mt-8 rounded-md max-w-[220px] w-full border border-transparent bg-indigo-600 px-10 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            @click="showAll"
+          >
+            Show All
+          </button>
         </div>
       </div>
     </div>
