@@ -34,7 +34,7 @@ const handleSearchChange = () => {
           <div class="relative">
             <input
               class="block w-full appearance-none bg-transparent py-4 pl-4 pr-12 text-base text-slate-900 placeholder:text-slate-600 focus:outline-none sm:text-sm sm:leading-6"
-              placeholder="Find anything..."
+              placeholder="Find product"
               aria-label="Search components"
               type="text"
               v-model="query"
