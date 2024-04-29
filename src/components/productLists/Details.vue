@@ -1,5 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import { useProductStore } from '@/stores/ProductStore'
+import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import {
   RadioGroup,
   RadioGroupLabel,
@@ -10,55 +14,19 @@ import {
   TabPanel,
   TabPanels
 } from '@headlessui/vue'
-
-import Header from '@/components/Header.vue'
-import { useProductStore } from '@/stores/ProductStore'
-import Footer from '@/components/Footer.vue'
+import StarIcon from '../icons/StarIcon.vue'
 const productStore = useProductStore()
+productStore.fill()
+const route = useRoute()
+const product = ref([])
+
 // import { StarIcon } from '@heroicons/vue/20/solid'
 // import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
+onMounted(() => {
+  product.value = productStore.products[route.params.id - 1]
+})
 
-const product = {
-  name: 'Zip Tote Basket',
-  price: '$140',
-  rating: 4,
-  images: [
-    {
-      id: 1,
-      name: 'Angled view',
-      src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      alt: 'Angled front view with bag zipped and handles upright.'
-    }
-    // More images...
-  ],
-  colors: [
-    { name: 'Washed Black', bgColor: 'bg-gray-700', selectedColor: 'ring-gray-700' },
-    { name: 'White', bgColor: 'bg-white', selectedColor: 'ring-gray-400' },
-    { name: 'Washed Gray', bgColor: 'bg-gray-500', selectedColor: 'ring-gray-500' }
-  ],
-  description: `
-    <p>The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.</p>
-  `,
-  details: [
-    {
-      name: 'Features',
-      items: [
-        'Multiple strap configurations',
-        'Spacious interior with top zip',
-        'Leather handle and tabs',
-        'Interior dividers',
-        'Stainless strap loops',
-        'Double stitched construction',
-        'Water-resistant'
-      ]
-    }
-    // More sections...
-  ]
-}
-
-const selectedColor = ref(product.colors[0])
-
-productStore.fill()
+// const selectedColor = ref(product.colors[0])
 </script>
 <template>
   <Header />
@@ -77,9 +45,8 @@ productStore.fill()
                   class="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                   v-slot="{ selected }"
                 >
-                  <span class="sr-only">{{ image.name }}</span>
                   <span class="absolute inset-0 overflow-hidden rounded-md">
-                    <img :src="image.src" alt="" class="h-full w-full object-cover object-center" />
+                    <img :src="image" alt="" class="h-full w-full object-cover object-center" />
                   </span>
                   <span
                     :class="[
@@ -95,8 +62,8 @@ productStore.fill()
             <TabPanels class="aspect-h-1 aspect-w-1 w-full">
               <TabPanel v-for="image in product.images" :key="image.id">
                 <img
-                  :src="image.src"
-                  :alt="image.alt"
+                  :src="image"
+                  :alt="product.imageAlt"
                   class="h-full w-full object-cover object-center sm:rounded-lg"
                 />
               </TabPanel>
@@ -139,8 +106,8 @@ productStore.fill()
 
             <form class="mt-6">
               <!-- Colors -->
-              <div>
-                <h3 class="text-sm text-gray-600">Color</h3>
+              <!-- <div> -->
+              <!-- <h3 class="text-sm text-gray-600">Color</h3>
 
                 <RadioGroup v-model="selectedColor" class="mt-2">
                   <RadioGroupLabel class="sr-only">Choose a color</RadioGroupLabel>
@@ -174,7 +141,7 @@ productStore.fill()
                     </RadioGroupOption>
                   </span>
                 </RadioGroup>
-              </div>
+              </div> -->
 
               <div class="mt-10 flex">
                 <button
@@ -182,14 +149,6 @@ productStore.fill()
                   class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                 >
                   Add to bag
-                </button>
-
-                <button
-                  type="button"
-                  class="ml-4 flex items-center justify-center rounded-md px-3 py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500"
-                >
-                  <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-                  <span class="sr-only">Add to favorites</span>
                 </button>
               </div>
             </form>
