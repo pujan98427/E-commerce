@@ -26,18 +26,20 @@ const addToCart = () => {
 <template>
   <div>
     <div class="relative h-72 w-full overflow-hidden rounded-lg">
-      <img
-        :src="product.imageSrc"
-        :alt="product.imageAlt"
-        class="h-full w-full object-cover object-center"
-      />
-      <div
-        aria-hidden="true"
+      <router-link :to="{ name: 'details', params: { id: product.id } }">
+        <img
+          :src="product.imageSrc"
+          :alt="product.imageAlt"
+          class="h-full w-full object-cover object-center"
+        />
+      </router-link>
+      <router-link
+        :to="{ name: 'details', params: { id: product.id } }"
         class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
       />
     </div>
     <div class="relative mt-4 text-center">
-      <h3 class="text-sm font-medium text-gray-900">
+      <h3 class="text-lg font-medium text-gray-900">
         <router-link
           :to="{ name: 'details', params: { id: product.id } }"
           class="hover:text-indigo-600"
@@ -50,7 +52,7 @@ const addToCart = () => {
     <div class="mt-4 text-center">
       <p class="relative text-lg font-semibold text-black">${{ product.price }}</p>
     </div>
-    <AppCountInput v-model="count" />
+    <AppCountInput class="flex justify-center mt-6" v-model="count" />
 
     <div class="mt-6">
       <Button

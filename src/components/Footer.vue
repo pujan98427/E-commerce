@@ -27,7 +27,7 @@ const navigation = ref({
 
 <template>
   <footer class="mt-10 pb-8">
-    <router-link to="/" class="text-center"
+    <router-link to="https://poojanchapagain.com.np/" class="text-center"
       ><img src="/images/mylogo.png" class="mx-auto max-w-[150px]" alt="pujan chapagain logo"
     /></router-link>
     <div class="mt-10 flex justify-center space-x-6">

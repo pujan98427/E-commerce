@@ -13,7 +13,7 @@ const updateValue = (value: Number | null) => {
 }
 </script>
 <template>
-  <div class="flex justify-center mt-6">
+  <div class="">
     <button
       class="bg-gray-200 px-2 rounded-l cursor-pointer"
       @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"

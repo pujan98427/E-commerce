@@ -34,7 +34,11 @@ const emit = defineEmits(['updateCount', 'clear'])
         <p class="mt-1 text-sm text-gray-500">{{ props.product.color }}</p>
       </div>
       <div class="flex flex-1 items-end justify-between text-sm">
-        <AppCountInput :model-value="count" @update:modelValue="$emit('updateCount', $event)" />
+        <AppCountInput
+          class="flex mt-4"
+          :model-value="count"
+          @update:modelValue="$emit('updateCount', $event)"
+        />
 
         <div class="flex">
           <button

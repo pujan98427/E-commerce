@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
-import MagnifyingGlassSvg from './icons/MagnifyingGlassSvg.vue'
-import { useCartStore } from '@/stores/CartStore'
+import { useRoute } from 'vue-router'
+
 import CartWidget from '@/components/cart/CartWidget.vue'
 import SearchField from './SearchField.vue'
-
+const route = useRoute()
 const navigation = {
   categories: [
     {
@@ -90,10 +90,10 @@ const navigation = {
           <!-- Logo -->
           <div class="flex flex-1">
             <h1 class="font-bold text-4xl text-indigo-600">
-              <a href="#">
+              <router-link to="/">
                 <span class="sr-only">Your Company</span>
                 E-com
-              </a>
+              </router-link>
             </h1>
           </div>
 
@@ -253,7 +253,7 @@ const navigation = {
 
           <div class="flex flex-1 items-center justify-end">
             <!-- Search -->
-            <SearchField />
+            <SearchField v-if="route.path === '/'" />
 
             <!-- Cart -->
             <CartWidget />

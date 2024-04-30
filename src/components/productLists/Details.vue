@@ -2,26 +2,22 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { useProductStore } from '@/stores/ProductStore'
+import { useCartStore } from '@/stores/CartStore'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import {
-  RadioGroup,
-  RadioGroupLabel,
-  RadioGroupOption,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels
-} from '@headlessui/vue'
+import AppCountInput from '@/components/AppCountInput.vue'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import StarIcon from '../icons/StarIcon.vue'
 const productStore = useProductStore()
+const cartStore = useCartStore()
 productStore.fill()
 const route = useRoute()
 const product = ref([])
 
-// import { StarIcon } from '@heroicons/vue/20/solid'
-// import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
+const count = ref(0)
+const addToCart = () => {
+  cartStore.addItems(count.value, product.value)
+}
 onMounted(() => {
   product.value = productStore.products[route.params.id - 1]
 })
@@ -104,54 +100,15 @@ onMounted(() => {
               <div class="space-y-6 text-base text-gray-700" v-html="product.description" />
             </div>
 
-            <form class="mt-6">
-              <!-- Colors -->
-              <!-- <div> -->
-              <!-- <h3 class="text-sm text-gray-600">Color</h3>
-
-                <RadioGroup v-model="selectedColor" class="mt-2">
-                  <RadioGroupLabel class="sr-only">Choose a color</RadioGroupLabel>
-                  <span class="flex items-center space-x-3">
-                    <RadioGroupOption
-                      as="template"
-                      v-for="color in product.colors"
-                      :key="color.name"
-                      :value="color"
-                      v-slot="{ active, checked }"
-                    >
-                      <div
-                        :class="[
-                          color.selectedColor,
-                          active && checked ? 'ring ring-offset-1' : '',
-                          !active && checked ? 'ring-2' : '',
-                          'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none'
-                        ]"
-                      >
-                        <RadioGroupLabel as="span" class="sr-only">{{
-                          color.name
-                        }}</RadioGroupLabel>
-                        <span
-                          aria-hidden="true"
-                          :class="[
-                            color.bgColor,
-                            'h-8 w-8 rounded-full border border-black border-opacity-10'
-                          ]"
-                        />
-                      </div>
-                    </RadioGroupOption>
-                  </span>
-                </RadioGroup>
-              </div> -->
-
-              <div class="mt-10 flex">
-                <button
-                  type="submit"
-                  class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
-                >
-                  Add to bag
-                </button>
-              </div>
-            </form>
+            <div class="mt-10">
+              <AppCountInput class="flex" v-model="count" />
+              <button
+                @click="addToCart"
+                class="mt-6 max-w-xs rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+              >
+                Add to bag
+              </button>
+            </div>
           </div>
         </div>
       </div>
