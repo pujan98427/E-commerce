@@ -72,7 +72,7 @@ onMounted(() => {
 
             <div class="mt-3">
               <h2 class="sr-only">Product information</h2>
-              <p class="text-3xl tracking-tight text-gray-900">{{ product.price }}</p>
+              <p class="text-3xl tracking-tight text-gray-900">${{ product.price }}</p>
             </div>
 
             <!-- Reviews -->
