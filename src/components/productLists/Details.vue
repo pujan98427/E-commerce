@@ -8,10 +8,10 @@ import { useRoute } from 'vue-router'
 import AppCountInput from '@/components/AppCountInput.vue'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import StarIcon from '../icons/StarIcon.vue'
+const route = useRoute()
 const productStore = useProductStore()
 const cartStore = useCartStore()
 productStore.fill()
-const route = useRoute()
 const product = ref([])
 
 const count = ref(0)
@@ -20,6 +20,7 @@ const addToCart = () => {
 }
 onMounted(() => {
   product.value = productStore.products[route.params.id - 1]
+  console.log(product.value)
 })
 
 // const selectedColor = ref(product.colors[0])
