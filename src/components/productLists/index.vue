@@ -47,7 +47,7 @@ const addToCart = () => {
           {{ product.name }}
         </router-link>
       </h3>
-      <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
+      <route-link to="#" class="mt-1 text-sm text-gray-500">{{ product.category }}</route-link>
     </div>
     <div class="mt-4 text-center">
       <p class="relative text-lg font-semibold text-black">${{ product.price }}</p>

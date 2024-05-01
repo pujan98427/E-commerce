@@ -7,77 +7,77 @@ import CartWidget from '@/components/cart/CartWidget.vue'
 import SearchField from './SearchField.vue'
 const route = useRoute()
 const navigation = {
-  categories: [
-    {
-      name: 'Women',
-      clothing: [
-        [
-          { name: 'Tops', href: '#' },
-          { name: 'Dresses', href: '#' },
-          { name: 'Pants', href: '#' },
-          { name: 'Denim', href: '#' },
-          { name: 'Sweaters', href: '#' },
-          { name: 'T-Shirts', href: '#' }
-        ],
-        [
-          { name: 'Jackets', href: '#' },
-          { name: 'Activewear', href: '#' },
-          { name: 'Shorts', href: '#' },
-          { name: 'Swimwear', href: '#' },
-          { name: 'Browse All', href: '#' }
-        ]
-      ],
-      accessories: [
-        { name: 'Shoes', href: '#' },
-        { name: 'Jewelry', href: '#' },
-        { name: 'Handbags', href: '#' },
-        { name: 'Socks', href: '#' },
-        { name: 'Hats', href: '#' },
-        { name: 'Browse All', href: '#' }
-      ],
-      categories: [
-        { name: 'New Arrivals', href: '#' },
-        { name: 'Sale', href: '#' },
-        { name: 'Basic Tees', href: '#' },
-        { name: 'Artwork Tees', href: '#' }
-      ]
-    },
-    {
-      name: 'Men',
-      clothing: [
-        [
-          { name: 'Dress Shirts', href: '#' },
-          { name: 'Pants', href: '#' },
-          { name: 'Jackets', href: '#' },
-          { name: 'T-Shirts', href: '#' },
-          { name: 'Jeans', href: '#' },
-          { name: 'Hoodies', href: '#' }
-        ],
-        [
-          { name: 'Vests', href: '#' },
-          { name: 'Kilts', href: '#' },
-          { name: 'Outdoors', href: '#' },
-          { name: 'Capes', href: '#' },
-          { name: 'Browse All', href: '#' }
-        ]
-      ],
-      accessories: [
-        { name: 'Watches', href: '#' },
-        { name: 'Boots', href: '#' },
-        { name: 'Fanny Packs', href: '#' },
-        { name: 'Sunglasses', href: '#' },
-        { name: 'Browse All', href: '#' }
-      ],
-      categories: [
-        { name: 'Just Added', href: '#' },
-        { name: 'Clearance', href: '#' },
-        { name: 'Graphic Tees', href: '#' }
-      ]
-    }
-  ],
+  // categories: [
+  //   {
+  //     name: 'Women',
+  //     clothing: [
+  //       [
+  //         { name: 'Tops', href: '#' },
+  //         { name: 'Dresses', href: '#' },
+  //         { name: 'Pants', href: '#' },
+  //         { name: 'Denim', href: '#' },
+  //         { name: 'Sweaters', href: '#' },
+  //         { name: 'T-Shirts', href: '#' }
+  //       ],
+  //       [
+  //         { name: 'Jackets', href: '#' },
+  //         { name: 'Activewear', href: '#' },
+  //         { name: 'Shorts', href: '#' },
+  //         { name: 'Swimwear', href: '#' },
+  //         { name: 'Browse All', href: '#' }
+  //       ]
+  //     ],
+  //     accessories: [
+  //       { name: 'Shoes', href: '#' },
+  //       { name: 'Jewelry', href: '#' },
+  //       { name: 'Handbags', href: '#' },
+  //       { name: 'Socks', href: '#' },
+  //       { name: 'Hats', href: '#' },
+  //       { name: 'Browse All', href: '#' }
+  //     ],
+  //     categories: [
+  //       { name: 'New Arrivals', href: '#' },
+  //       { name: 'Sale', href: '#' },
+  //       { name: 'Basic Tees', href: '#' },
+  //       { name: 'Artwork Tees', href: '#' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Men',
+  //     clothing: [
+  //       [
+  //         { name: 'Dress Shirts', href: '#' },
+  //         { name: 'Pants', href: '#' },
+  //         { name: 'Jackets', href: '#' },
+  //         { name: 'T-Shirts', href: '#' },
+  //         { name: 'Jeans', href: '#' },
+  //         { name: 'Hoodies', href: '#' }
+  //       ],
+  //       [
+  //         { name: 'Vests', href: '#' },
+  //         { name: 'Kilts', href: '#' },
+  //         { name: 'Outdoors', href: '#' },
+  //         { name: 'Capes', href: '#' },
+  //         { name: 'Browse All', href: '#' }
+  //       ]
+  //     ],
+  //     accessories: [
+  //       { name: 'Watches', href: '#' },
+  //       { name: 'Boots', href: '#' },
+  //       { name: 'Fanny Packs', href: '#' },
+  //       { name: 'Sunglasses', href: '#' },
+  //       { name: 'Browse All', href: '#' }
+  //     ],
+  //     categories: [
+  //       { name: 'Just Added', href: '#' },
+  //       { name: 'Clearance', href: '#' },
+  //       { name: 'Graphic Tees', href: '#' }
+  //     ]
+  //   }
+  // ],
   other: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' }
+    { name: 'Shop', href: 'shop' },
+    { name: 'Category', href: 'categories' }
   ]
 }
 </script>
@@ -102,7 +102,7 @@ const navigation = {
             <div
               class="flex h-14 space-x-8 overflow-x-auto border-t px-4 pb-px sm:h-full sm:justify-center sm:overflow-visible sm:border-t-0 sm:pb-0"
             >
-              <Popover
+              <!-- <Popover
                 v-for="(category, categoryIdx) in navigation.categories"
                 :key="categoryIdx"
                 class="flex"
@@ -131,9 +131,9 @@ const navigation = {
                   <PopoverPanel
                     class="absolute inset-x-0 top-full z-20 bg-white text-gray-500 sm:text-sm"
                   >
-                    <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                   
                     <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-                    <!-- Fake border when menu is open -->
+                  
                     <div
                       class="absolute inset-0 -top-px mx-auto h-px max-w-7xl sm:top-0 sm:px-6 lg:px-8"
                       aria-hidden="true"
@@ -239,14 +239,24 @@ const navigation = {
                     </div>
                   </PopoverPanel>
                 </transition>
-              </Popover>
+              </Popover> -->
 
-              <a
+              <router-link
                 v-for="item in navigation.other"
                 :key="item.name"
-                :href="item.href"
+                :to="{ name: item.href }"
                 class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                >{{ item.name }}</a
+                >{{ item.name }}</router-link
+              >
+              <router-link
+                :to="{ name: 'category', params: { id: 3 } }"
+                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Clothes</router-link
+              >
+              <router-link
+                :to="{ name: 'category', params: { id: 1 } }"
+                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                >Bags</router-link
               >
             </div>
           </PopoverGroup>
