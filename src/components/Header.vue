@@ -263,7 +263,7 @@ const navigation = {
 
           <div class="flex flex-1 items-center justify-end">
             <!-- Search -->
-            <SearchField v-if="route.path === '/'" />
+            <SearchField v-if="route.path === '/shop'" />
 
             <!-- Cart -->
             <CartWidget />
