@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
+import { useLocalStorage } from '@vueuse/core'
 
 export const useProductStore = defineStore('ProductStore', {
   state: () => ({
-    products: [],
+    products: useLocalStorage('productStore:products', []),
     filterText: ''
   }),
   actions: {

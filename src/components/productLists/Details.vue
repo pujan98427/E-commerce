@@ -18,10 +18,8 @@ const count = ref(0)
 const addToCart = () => {
   cartStore.addItems(count.value, product.value)
 }
-onMounted(() => {
-  product.value = productStore.products[route.params.id - 1]
-  console.log(product.value)
-})
+
+product.value = productStore.products[route.params.id - 1]
 
 // const selectedColor = ref(product.colors[0])
 </script>
