@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import ProductList from '@/components/productLists/index.vue'
 import Header from '@/components/Header.vue'
@@ -12,6 +12,16 @@ productStore.fill()
 function showAll() {
   productStore.filterText = ''
   productStore.fill()
+}
+const pagination = ref({
+  currentPage: 1,
+  maxPerPost: 8
+})
+const paginatedOrders = computed(() => {
+  return productStore.products.slice(0, pagination.value.currentPage * pagination.value.maxPerPost)
+})
+function loadMore() {
+  pagination.value.currentPage += 0.5
 }
 // https://www.youtube.com/watch?v=cfiN8lCA3RM
 // https://github.com/thecodeholic/vue-meals-app/blob/main/src/components/MealItem.vue
@@ -28,7 +38,7 @@ function showAll() {
           class="mt-8 md:mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
           <ProductList
-            v-for="(product, index) in productStore.products"
+            v-for="(product, index) in paginatedOrders"
             :key="index"
             :product="product"
             @addToCart="cartStore.addItems($event, product)"
@@ -40,6 +50,15 @@ function showAll() {
             @click="showAll"
           >
             Show All
+          </button>
+        </div>
+        <div class="text-center" v-if="productStore.filterText == ''">
+          <button
+            v-if="pagination.currentPage * pagination.maxPerPost < productStore.products.length"
+            class="mt-16 rounded-md max-w-[220px] w-full border border-transparent bg-indigo-600 px-10 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            @click="loadMore"
+          >
+            Load More
           </button>
         </div>
       </div>

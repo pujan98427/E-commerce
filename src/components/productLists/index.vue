@@ -24,13 +24,13 @@ const addToCart = () => {
 </script>
 
 <template>
-  <div>
+  <div class="group">
     <div class="relative h-72 w-full overflow-hidden rounded-lg">
       <router-link :to="{ name: 'details', params: { id: product.id } }">
         <img
           :src="product.imageSrc"
           :alt="product.imageAlt"
-          class="h-full w-full object-cover object-center"
+          class="h-full w-full object-cover transition-all scale-100 group-hover:scale-110 duration-300 object-center"
         />
       </router-link>
       <router-link
