@@ -4,7 +4,7 @@ import Footer from '@/components/Footer.vue'
 import { useProductStore } from '@/stores/ProductStore'
 import RelatedProduct from '@/components/productLists/index.vue'
 import { useCartStore } from '@/stores/CartStore'
-import { computed, ref, watchEffect } from 'vue'
+import { computed, ref, watchEffect, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AppCountInput from '@/components/AppCountInput.vue'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
@@ -19,7 +19,7 @@ const count = ref(0)
 const addToCart = () => {
   cartStore.addItems(count.value, product.value)
 }
-
+watch(route.params.id)
 // Fetch the product based on route params
 const getProduct = () => {
   const productId = route.params.id

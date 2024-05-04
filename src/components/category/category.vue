@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import ProductList from '@/components/productLists/index.vue'
 import Header from '@/components/Header.vue'
@@ -10,29 +10,44 @@ const cartStore = useCartStore()
 const productStore = useProductStore()
 
 productStore.fill()
-const product = ref([])
+const IDproduct = ref([])
 const route = useRoute()
+
 function showAll() {
   productStore.filterText = ''
   productStore.fill()
 }
+
 const pagination = ref({
   currentPage: 1,
   maxPerPost: 8
 })
 
-const getRouteProduct = productStore.products.filter((product) => product.id == route.params.id)
-const categoryProduct = productStore.products.filter(
-  (product) => product.category == getRouteProduct[0].category
-)
+const categoryProduct = ref([])
 
+function getRouteProduct() {
+  const productId = route.params.id
+  if (productId) {
+    IDproduct.value = productStore.products.filter((product) => product.id == productId)
+  }
+}
+
+const filteredRelatedProducts = computed(() => {
+  return productStore.products.filter((product) => product.category == IDproduct.value[0]?.category)
+})
+
+watch(route.params)
+
+watchEffect(() => {
+  getRouteProduct()
+  categoryProduct.value = filteredRelatedProducts.value
+})
 const paginatedOrders = computed(() => {
-  return categoryProduct.slice(0, pagination.value.currentPage * pagination.value.maxPerPost)
+  return categoryProduct.value.slice(0, pagination.value.currentPage * pagination.value.maxPerPost)
 })
 function loadMore() {
   pagination.value.currentPage += 0.5
 }
-product.value = productStore.products[route.params.id - 1]
 </script>
 
 <template>
@@ -41,11 +56,12 @@ product.value = productStore.products[route.params.id - 1]
     <div class="bg-white">
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 text-center">
-          {{ paginatedOrders[0].category }}
+          {{ paginatedOrders[0]?.category }}
         </h2>
 
         <div
           class="mt-8 md:mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+          :key="paginatedOrders[0]?.category"
         >
           <ProductList
             v-for="(product, index) in paginatedOrders"

@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
-import { useRoute } from 'vue-router'
+import { ref, computed } from 'vue'
+import { PopoverGroup } from '@headlessui/vue'
+import { useRoute, useRouter } from 'vue-router'
 
 import CartWidget from '@/components/cart/CartWidget.vue'
 import SearchField from './SearchField.vue'
 const route = useRoute()
+const router = useRouter()
 const navigation = {
   // categories: [
   //   {
@@ -76,9 +77,17 @@ const navigation = {
   //   }
   // ],
   other: [
-    { name: 'Shop', href: 'shop' },
-    { name: 'Category', href: 'categories' }
+    { name: 'Shop', href: { name: 'shop' } },
+    { name: 'Category', href: { name: 'categories' } },
+    { name: 'Clothes', href: { name: 'category', params: { id: 3 } } },
+    { name: 'Bags', href: { name: 'category', params: { id: 1 } } }
   ]
+}
+function generateTo(item) {
+  return { name: item.href.name, params: item.href.params }
+}
+function isLinkActive(item) {
+  return route.path === router.resolve(generateTo(item)).href
 }
 </script>
 
@@ -102,161 +111,14 @@ const navigation = {
             <div
               class="flex h-14 space-x-8 overflow-x-auto border-t px-4 pb-px sm:h-full sm:justify-center sm:overflow-visible sm:border-t-0 sm:pb-0"
             >
-              <!-- <Popover
-                v-for="(category, categoryIdx) in navigation.categories"
-                :key="categoryIdx"
-                class="flex"
-                v-slot="{ open }"
-              >
-                <div class="relative flex">
-                  <PopoverButton
-                    :class="[
-                      open
-                        ? 'border-indigo-600 text-indigo-600'
-                        : 'border-transparent text-gray-700 hover:text-gray-800',
-                      'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out'
-                    ]"
-                    >{{ category.name }}</PopoverButton
-                  >
-                </div>
-
-                <transition
-                  enter-active-class="transition ease-out duration-200"
-                  enter-from-class="opacity-0"
-                  enter-to-class="opacity-100"
-                  leave-active-class="transition ease-in duration-150"
-                  leave-from-class="opacity-100"
-                  leave-to-class="opacity-0"
-                >
-                  <PopoverPanel
-                    class="absolute inset-x-0 top-full z-20 bg-white text-gray-500 sm:text-sm"
-                  >
-                   
-                    <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-                  
-                    <div
-                      class="absolute inset-0 -top-px mx-auto h-px max-w-7xl sm:top-0 sm:px-6 lg:px-8"
-                      aria-hidden="true"
-                    >
-                      <div
-                        :class="[
-                          open ? 'bg-gray-200' : 'bg-transparent',
-                          'h-px w-full transition-colors duration-200 ease-out'
-                        ]"
-                      />
-                    </div>
-
-                    <div class="relative">
-                      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <div
-                          class="grid grid-cols-1 items-start gap-x-6 gap-y-10 pb-12 pt-10 md:grid-cols-2 lg:gap-x-8"
-                        >
-                          <div class="grid grid-cols-1 gap-x-6 gap-y-10 lg:gap-x-8">
-                            <div>
-                              <p id="clothing-heading" class="font-medium text-gray-900">
-                                Clothing
-                              </p>
-                              <div
-                                class="mt-4 border-t border-gray-200 pt-6 sm:grid sm:grid-cols-2 sm:gap-x-6"
-                              >
-                                <ul
-                                  role="list"
-                                  aria-labelledby="clothing-heading"
-                                  class="space-y-6 sm:space-y-4"
-                                >
-                                  <li
-                                    v-for="item in category.clothing[0]"
-                                    :key="item.name"
-                                    class="flex"
-                                  >
-                                    <a :href="item.href" class="hover:text-gray-800">{{
-                                      item.name
-                                    }}</a>
-                                  </li>
-                                </ul>
-                                <ul
-                                  role="list"
-                                  aria-label="More clothing"
-                                  class="mt-6 space-y-6 sm:mt-0 sm:space-y-4"
-                                >
-                                  <li
-                                    v-for="item in category.clothing[1]"
-                                    :key="item.name"
-                                    class="flex"
-                                  >
-                                    <a :href="item.href" class="hover:text-gray-800">{{
-                                      item.name
-                                    }}</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:gap-x-8">
-                            <div>
-                              <p id="accessories-heading" class="font-medium text-gray-900">
-                                Accessories
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="accessories-heading"
-                                class="mt-4 space-y-6 border-t border-gray-200 pt-6 sm:space-y-4"
-                              >
-                                <li
-                                  v-for="item in category.accessories"
-                                  :key="item.name"
-                                  class="flex"
-                                >
-                                  <a :href="item.href" class="hover:text-gray-800">{{
-                                    item.name
-                                  }}</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p id="categories-heading" class="font-medium text-gray-900">
-                                Categories
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="categories-heading"
-                                class="mt-4 space-y-6 border-t border-gray-200 pt-6 sm:space-y-4"
-                              >
-                                <li
-                                  v-for="item in category.categories"
-                                  :key="item.name"
-                                  class="flex"
-                                >
-                                  <a :href="item.href" class="hover:text-gray-800">{{
-                                    item.name
-                                  }}</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </PopoverPanel>
-                </transition>
-              </Popover> -->
-
               <router-link
                 v-for="item in navigation.other"
                 :key="item.name"
-                :to="{ name: item.href }"
-                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                :to="generateTo(item)"
+                class="flex items-center text-sm font-medium hover:text-indigo-600"
+                :class="{ 'text-indigo-600': isLinkActive(item) }"
+                exact
                 >{{ item.name }}</router-link
-              >
-              <router-link
-                :to="{ name: 'category', params: { id: 3 } }"
-                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                >Clothes</router-link
-              >
-              <router-link
-                :to="{ name: 'category', params: { id: 1 } }"
-                class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                >Bags</router-link
               >
             </div>
           </PopoverGroup>
