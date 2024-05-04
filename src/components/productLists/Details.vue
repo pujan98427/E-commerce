@@ -151,8 +151,8 @@ watchEffect(() => {
           </div>
           <!-- <pre>
     {{ JSON.stringify(relatedProducts, null, 2) }}
-  </pre -->
-          >
+  </pre 
+          >-->
         </div>
       </div>
     </div>
