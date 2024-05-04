@@ -63,7 +63,7 @@ product.value = productStore.products[route.params.id - 1]
         <div class="text-center" v-if="productStore.filterText == ''">
           <button
             v-if="
-              pagination.currentPage * pagination.maxPerPost < productStore.products.length &&
+              pagination.currentPage * pagination.maxPerPost < categoryProduct.length &&
               categoryProduct.length > 4
             "
             class="mt-16 rounded-md max-w-[220px] w-full border border-transparent bg-indigo-600 px-10 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

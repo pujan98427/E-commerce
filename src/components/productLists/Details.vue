@@ -2,8 +2,9 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { useProductStore } from '@/stores/ProductStore'
+import RelatedProduct from '@/components/productLists/index.vue'
 import { useCartStore } from '@/stores/CartStore'
-import { onMounted, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import AppCountInput from '@/components/AppCountInput.vue'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
@@ -12,16 +13,39 @@ const route = useRoute()
 const productStore = useProductStore()
 const cartStore = useCartStore()
 productStore.fill()
-const product = ref([])
+const product = ref(null)
 
 const count = ref(0)
 const addToCart = () => {
   cartStore.addItems(count.value, product.value)
 }
 
-product.value = productStore.products[route.params.id - 1]
+// Fetch the product based on route params
+const getProduct = () => {
+  const productId = route.params.id
+  if (productId) {
+    product.value = productStore.products.find((p) => p.id == productId)
+    console.log('Selected product:', product.value)
+  }
+}
+const relatedProducts = ref([])
+const filteredRelatedProducts = computed(() => {
+  if (product.value && product.value.category) {
+    return productStore.products
+      .filter((p) => p.id !== product.value.id) // Exclude the current product
+      .filter((p) => p.category === product.value.category) // Filter by category
+      .slice(0, 4)
+  } else {
+    console.warn('Product or its category is undefined.')
+    return []
+  }
+})
 
-// const selectedColor = ref(product.colors[0])
+watchEffect(() => {
+  getProduct()
+  relatedProducts.value = filteredRelatedProducts.value
+  console.log('relatedproduct', relatedProducts.value)
+})
 </script>
 <template>
   <Header />
@@ -109,6 +133,26 @@ product.value = productStore.products[route.params.id - 1]
               </button>
             </div>
           </div>
+        </div>
+        <!-- Related Product -->
+        <div class="mt-10">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center">
+            Related Products
+          </h2>
+          <div
+            class="mt-8 md:mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+          >
+            <RelatedProduct
+              v-for="(product, index) in relatedProducts"
+              :key="index"
+              :product="product"
+              @addToCart="cartStore.addItems($event, product)"
+            />
+          </div>
+          <!-- <pre>
+    {{ JSON.stringify(relatedProducts, null, 2) }}
+  </pre -->
+          >
         </div>
       </div>
     </div>
