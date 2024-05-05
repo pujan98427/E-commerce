@@ -159,10 +159,13 @@ const sliceProducts = productStore.products.slice(0, 4)
         </div>
 
         <div class="mt-10 text-sm text-center">
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+          <router-link
+            :to="{ name: 'shop' }"
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+          >
             Shop the collection
             <span aria-hidden="true"> &rarr;</span>
-          </a>
+          </router-link>
         </div>
       </div>
     </section>
