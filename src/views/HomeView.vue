@@ -63,9 +63,9 @@ const sliceProducts = productStore.products.slice(0, 4)
           <div class="h-48 w-full bg-white" />
         </div>
         <div class="relative py-32">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-5xl">
+          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-5xl">
             Mid-Season Sale
-          </h1>
+          </h2>
           <div class="mt-6 sm:mt-10">
             <router-link
               :to="{ name: 'shop' }"
