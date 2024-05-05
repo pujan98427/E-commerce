@@ -1,20 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import AppCountInput from '@/components/AppCountInput.vue'
 
 const props = defineProps({
   product: []
 })
 interface Product {
-  id: number
-  name: string
-  color: string
-  href: string
-  imageSrc: string
-  imageAlt: string
-  price: string
+  id?: number
+  name?: string
+  color?: string
+  href?: string
+  imageSrc?: string
+  imageAlt?: string
+  price?: string
 }
-const product: Product = props.product
+watch(
+  () => props.product,
+  (newVal, oldVal) => {
+    const product: Product = props.product
+  }
+)
 
 const emits = defineEmits(['addToCart'])
 const count = ref(0)

@@ -19,7 +19,7 @@ const count = ref(0)
 const addToCart = () => {
   cartStore.addItems(count.value, product.value)
 }
-watch(route.params.id)
+
 // Fetch the product based on route params
 const getProduct = () => {
   const productId = route.params.id
@@ -28,8 +28,8 @@ const getProduct = () => {
     console.log('Selected product:', product.value)
   }
 }
-const relatedProducts = ref([])
-const filteredRelatedProducts = computed(() => {
+
+const relatedProducts = computed(() => {
   if (product.value && product.value.category) {
     return productStore.products
       .filter((p) => p.id !== product.value.id) // Exclude the current product
@@ -43,7 +43,7 @@ const filteredRelatedProducts = computed(() => {
 
 watchEffect(() => {
   getProduct()
-  relatedProducts.value = filteredRelatedProducts.value
+
   console.log('relatedproduct', relatedProducts.value)
 })
 </script>
@@ -141,6 +141,7 @@ watchEffect(() => {
           </h2>
           <div
             class="mt-8 md:mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+            :key="relatedProducts.id"
           >
             <RelatedProduct
               v-for="(product, index) in relatedProducts"
