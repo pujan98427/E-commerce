@@ -5,6 +5,8 @@ import Categories from '@/components/category/index.vue'
 import Category from '@/components/category/category.vue'
 import Shop from '@/components/productLists/shop.vue'
 import Details from '@/components/productLists/Details.vue'
+import ProductCreate from '@/components/admin/product/ProductCreate.vue'
+import ProductEdit from '@/components/admin/product/ProductEdit.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +36,16 @@ const router = createRouter({
       path: '/products/category/:id',
       name: 'category',
       component: Category
+    },
+    {
+      path: '/admin/product/create',
+      name: 'product-create',
+      component: ProductCreate
+    },
+    {
+      path: '/admin/product/edit',
+      name: 'product-edit',
+      component: ProductEdit
     },
 
     {
