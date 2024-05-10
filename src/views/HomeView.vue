@@ -9,7 +9,7 @@ productStore.fill()
 
 let categories = [
   ...new Map(
-    productStore.products
+    productStore.products.products
       .filter((product) => product.category)
       .map((product) => [
         product.category,
@@ -22,7 +22,7 @@ let categories = [
   ).values()
 ]
 categories = categories.slice(0, 3)
-const sliceProducts = productStore.products.slice(0, 4)
+const sliceProducts = productStore.products.products.slice(0, 4)
 
 // https://www.youtube.com/watch?v=cfiN8lCA3RM
 // https://github.com/thecodeholic/vue-meals-app/blob/main/src/components/MealItem.vue
