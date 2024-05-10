@@ -8,7 +8,7 @@ productStore.fill()
 
 const categories = [
   ...new Map(
-    productStore.products
+    productStore.products.products
       .filter((product) => product.category)
       .map((product) => [
         product.category,

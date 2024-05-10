@@ -36,7 +36,7 @@ watch(
 const createProduct = () => {
   formData.value.id = Math.floor(Math.random() * 1000)
   axios
-    .post('/src/data/products.json', { ...formData.value })
+    .post(' http://localhost:3000/products', { ...formData.value })
     .then((response: AxiosResponse) => {
       console.log(response.data)
     })

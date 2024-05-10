@@ -31,6 +31,7 @@ To explore our Vue 3 E-Commerce Website, follow these steps:
 3. Start the development server (npm run dev or yarn serve).
 4. Open your web browser and navigate to the provided local server address.
 5. Begin exploring the product listing, adding items to your cart, and experiencing the seamless shopping journey our website offers.
+6. json-server -w ./data/products.json
 
 ## Recommended IDE Setup
 
