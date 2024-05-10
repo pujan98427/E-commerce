@@ -19,10 +19,7 @@ const pagination = ref({
   maxPerPost: 8
 })
 const paginatedOrders = computed(() => {
-  return productStore.products.products.slice(
-    0,
-    pagination.value.currentPage * pagination.value.maxPerPost
-  )
+  return productStore.products.slice(0, pagination.value.currentPage * pagination.value.maxPerPost)
 })
 function loadMore() {
   pagination.value.currentPage += 0.5
@@ -58,9 +55,7 @@ function loadMore() {
         </div>
         <div class="text-center" v-if="productStore.filterText == ''">
           <button
-            v-if="
-              pagination.currentPage * pagination.maxPerPost < productStore.products.products.length
-            "
+            v-if="pagination.currentPage * pagination.maxPerPost < productStore.products.length"
             class="mt-16 rounded-md max-w-[220px] w-full border border-transparent bg-indigo-600 px-10 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             @click="loadMore"
           >

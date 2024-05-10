@@ -28,14 +28,12 @@ const categoryProduct = ref([])
 function getRouteProduct() {
   const productId = route.params.id
   if (productId) {
-    IDproduct.value = productStore.products.products.filter((product) => product.id == productId)
+    IDproduct.value = productStore.products.filter((product) => product.id == productId)
   }
 }
 
 const filteredRelatedProducts = computed(() => {
-  return productStore.products.products.filter(
-    (product) => product.category == IDproduct.value[0]?.category
-  )
+  return productStore.products.filter((product) => product.category == IDproduct.value[0]?.category)
 })
 
 watch(route.params)

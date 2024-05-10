@@ -24,14 +24,14 @@ const addToCart = () => {
 const getProduct = () => {
   const productId = route.params.id
   if (productId) {
-    product.value = productStore.products.products.find((p) => p.id == productId)
+    product.value = productStore.products.find((p) => p.id == productId)
     console.log('Selected product:', product.value)
   }
 }
 
 const relatedProducts = computed(() => {
   if (product.value && product.value.category) {
-    return productStore.products.products
+    return productStore.products
       .filter((p) => p.id !== product.value.id) // Exclude the current product
       .filter((p) => p.category === product.value.category) // Filter by category
       .slice(0, 4)

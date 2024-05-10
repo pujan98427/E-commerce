@@ -5,14 +5,14 @@ import { debounce } from 'lodash'
 import Input from '@/components/Input.vue'
 
 interface FormData {
-  id: number
+  userId: number
   name: string
   slug: string
   description: string
 }
 
 const formData = ref<FormData>({
-  id: null,
+  userId: null,
   name: '',
   slug: '',
   description: ''
@@ -34,9 +34,9 @@ watch(
 )
 
 const createProduct = () => {
-  formData.value.id = Math.floor(Math.random() * 1000)
+  formData.value.userId = Math.floor(Math.random() * 1000)
   axios
-    .post(' http://localhost:3000/products', { ...formData.value })
+    .post('https://dummyjson.com/products/add', { ...formData.value })
     .then((response: AxiosResponse) => {
       console.log(response.data)
     })
