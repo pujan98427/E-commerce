@@ -25,3 +25,5 @@ export const useProductStore = defineStore('ProductStore', {
     }
   }
 })
+// https://dummy.restapiexample.com/
+// https://reqres.in/

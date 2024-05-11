@@ -1,0 +1,504 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Zip Tote Basket",
+      "color": "White and black",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-1.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-7.jpg"
+      ],
+      "imageSrc": "/images/products/product-1.jpg",
+      "imageAlt": "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
+      "price": "140"
+    },
+    {
+      "id": 2,
+      "name": "Striped T-Shirt",
+      "color": "Blue and white",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-2.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-2.jpg",
+      "imageAlt": "Front of blue and white striped t-shirt.",
+      "price": "25"
+    },
+    {
+      "id": 3,
+      "name": "Denim White T-shirt",
+      "color": "Gray",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-3.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-3.jpg",
+      "imageAlt": "Pair of gray canvas shoes.",
+      "price": "60"
+    },
+    {
+      "id": 4,
+      "name": "Zip Tote White Basket",
+      "color": "Blue",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-3.jpg",
+        "/images/products/product-2.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-4.jpg",
+      "imageAlt": "Front of blue denim jacket.",
+      "price": "90"
+    },
+    {
+      "id": 5,
+      "name": "Nike Dunk Low",
+      "color": "White",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Nike",
+      "category": "Shoes",
+      "images": [
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-1.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-5.jpg",
+      "imageAlt": "Brown leather belt with silver buckle.",
+      "price": "35"
+    },
+    {
+      "id": 6,
+      "name": "Shoulder Bag",
+      "color": "Yellow and pink",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-2.jpg",
+        "/images/products/product-7.jpg"
+      ],
+      "imageSrc": "/images/products/product-6.jpg",
+      "imageAlt": "Yellow and pink floral dress.",
+      "price": "120"
+    },
+    {
+      "id": 7,
+      "name": "Ladies Bag",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-7.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-8.jpg"
+      ],
+      "imageSrc": "/images/products/product-7.jpg",
+      "imageAlt": "Black sunglasses with dark lenses.",
+      "price": "50"
+    },
+    {
+      "id": 8,
+      "name": "Mat Black T-shirt",
+      "color": "Silver",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-8.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-1.jpg"
+      ],
+      "imageSrc": "/images/products/product-8.jpg",
+      "imageAlt": "Silver watch with black dial and leather strap.",
+      "price": "180"
+    },
+    {
+      "id": 9,
+      "name": "Duffle Bag",
+      "color": "Gray",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-9.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-7.jpg"
+      ],
+      "imageSrc": "/images/products/product-9.jpg",
+      "imageAlt": "Gray hooded sweatshirt.",
+      "price": "70"
+    },
+    {
+      "id": 10,
+      "name": "Ladies T-shirt",
+      "color": "Pink",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-10.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-11.jpg"
+      ],
+      "imageSrc": "/images/products/product-10.jpg",
+      "imageAlt": "Black backpack with multiple compartments.",
+      "price": "100"
+    },
+    {
+      "id": 11,
+      "name": "Laptop Bag",
+      "color": "Blue and white",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-11.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-11.jpg",
+      "imageAlt": "Pair of blue and white running shoes.",
+      "price": "80"
+    },
+    {
+      "id": 12,
+      "name": "Shopping Bag",
+      "color": "Red and white",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-12.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-12.jpg",
+      "imageAlt": "Front of red and white striped polo shirt.",
+      "price": "45"
+    },
+    {
+      "id": 13,
+      "name": "Leather Wallet",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-13.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-13.jpg",
+      "imageAlt": "Brown leather wallet with multiple card slots.",
+      "price": "50"
+    },
+    {
+      "id": 14,
+      "name": "Puffer Jacket",
+      "color": "Black",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-14.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-14.jpg",
+      "imageAlt": "Front of black puffer jacket.",
+      "price": "110"
+    },
+    {
+      "id": 15,
+      "name": "Hand Bag",
+      "color": "Blue",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-15.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-15.jpg",
+      "imageAlt": "Front of blue casual shirt.",
+      "price": "55"
+    },
+    {
+      "id": 16,
+      "name": "Canvas Backpack",
+      "color": "Green",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-16.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-16.jpg",
+      "imageAlt": "Green canvas backpack with brown leather accents.",
+      "price": "75"
+    },
+    {
+      "id": 17,
+      "name": "Small Shoulder Bag",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-17.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-17.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 18,
+      "name": "Yellow Tote  Bag",
+      "color": "Dark blue",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Bags",
+      "images": [
+        "/images/products/product-18.jpg",
+        "/images/products/product-4.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-6.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-18.jpg",
+      "imageAlt": "Dark blue denim jeans.",
+      "price": "65"
+    },
+    {
+      "id": 19,
+      "name": "Cold Brew Bottle",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-19.jpg",
+        "/images/products/product-10.jpg",
+        "/images/products/product-11.jpg",
+        "/images/products/product-12.jpg",
+        "/images/products/product-13.jpg"
+      ],
+      "imageSrc": "/images/products/product-19.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "32"
+    },
+    {
+      "id": 20,
+      "name": "Pen",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-20.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-20.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 21,
+      "name": "Wood",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-21.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-21.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 22,
+      "name": "Branded Watch",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-22.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-22.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 23,
+      "name": "Diary",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-23.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-23.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 24,
+      "name": "Distant Mountains Artwork Tee",
+      "color": "Brown",
+      "description": "An apple mobile which is nothing like apple. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi vestibulum, vehicula mauris non, gravida lacus. Sed sit amet fermentum tellus. Phasellus sed semper neque. Sed auctor tellus sit amet dictum tempor. Curabitur tincidunt libero sed tortor lacinia, sit amet ullamcorper lorem blandit. Nullam a leo odio. Vivamus in feugiat metus. Ut in fringilla justo. Sed malesuada, urna nec congue dignissim, orci mi venenatis nisl, eget convallis odio velit ut justo. Proin bibendum arcu arcu, quis efficitur nunc rutrum at. Duis lobortis, velit nec venenatis fringilla, elit mi posuere tortor, et luctus urna metus sit amet libero. Phasellus a libero quis turpis malesuada cursus sit amet non nunc. Cras ac purus id risus vestibulum scelerisque. Sed lobortis ultrices justo nec ultricies. Aliquam ut fringilla ante.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Clothes",
+      "images": [
+        "/images/products/product-24.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-24.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "95"
+    },
+    {
+      "id": 25,
+      "name": "Nomad Tumbler",
+      "color": "Brown",
+      "description": "This durable and portable insulated tumbler will keep your beverage at the perfect temperature during your next adventure.",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "Accessories",
+      "images": [
+        "/images/products/product-25.jpg",
+        "/images/products/product-15.jpg",
+        "/images/products/product-16.jpg",
+        "/images/products/product-5.jpg",
+        "/images/products/product-4.jpg"
+      ],
+      "imageSrc": "/images/products/product-25.jpg",
+      "imageAlt": "Pair of brown hiking boots.",
+      "price": "35"
+    }
+  ]
+}

@@ -52,7 +52,11 @@ const addToCart = () => {
           {{ product.name }}
         </router-link>
       </h3>
-      <route-link to="#" class="mt-1 text-sm text-gray-500">{{ product.category }}</route-link>
+      <router-link
+        :to="{ name: 'category', params: { id: product.id } }"
+        class="mt-1 text-sm text-gray-500 hover:text-indigo-600"
+        >{{ product.category }}</router-link
+      >
     </div>
     <div class="mt-4 text-center">
       <p class="relative text-lg font-semibold text-black">${{ product.price }}</p>
