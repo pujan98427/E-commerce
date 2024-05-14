@@ -30,7 +30,7 @@ const addToCart = () => {
 
 <template>
   <div class="group">
-    <div class="relative h-72 w-full overflow-hidden rounded-lg">
+    <figure class="relative h-72 w-full overflow-hidden rounded-lg">
       <router-link :to="{ name: 'details', params: { id: product.id } }">
         <img
           :src="product.imageSrc"
@@ -42,7 +42,7 @@ const addToCart = () => {
         :to="{ name: 'details', params: { id: product.id } }"
         class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
       />
-    </div>
+    </figure>
     <div class="relative mt-4 text-center">
       <h3 class="text-lg font-medium text-gray-900">
         <router-link

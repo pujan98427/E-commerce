@@ -30,28 +30,30 @@ const categories = [
 
         <div class="mt-8 md:mt-16">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-4 xl:gap-x-">
-            <router-link
-              v-for="product in categories"
-              :key="product.name"
-              :to="{ name: 'category', params: { id: product.id } }"
-              class="relative group flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
-            >
-              <span aria-hidden="true" class="absolute inset-0">
-                <img
-                  :src="product.imageSrc"
-                  alt=""
-                  class="h-full w-full object-cover transition-all scale-100 group-hover:scale-110 duration-300 object-center"
-                />
-              </span>
-              <span
-                aria-hidden="true"
-                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
-              />
-              <span
-                class="relative mt-auto text-center text-xl font-bold text-white group-hover:text-indigo-600"
-                >{{ product.name }}</span
+            <transition-group appear name="fade-slide" mode="out-in">
+              <router-link
+                v-for="product in categories"
+                :key="product.name"
+                :to="{ name: 'category', params: { id: product.id } }"
+                class="relative group flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
               >
-            </router-link>
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img
+                    :src="product.imageSrc"
+                    alt=""
+                    class="h-full w-full object-cover transition-all scale-100 group-hover:scale-110 duration-300 object-center"
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                />
+                <span
+                  class="relative mt-auto text-center text-xl font-bold text-white group-hover:text-indigo-600"
+                  >{{ product.name }}</span
+                >
+              </router-link>
+            </transition-group>
           </div>
         </div>
 

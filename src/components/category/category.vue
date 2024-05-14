@@ -63,12 +63,14 @@ function loadMore() {
           class="mt-8 md:mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
           :key="paginatedOrders[0]?.category"
         >
-          <ProductList
-            v-for="(product, index) in paginatedOrders"
-            :key="index"
-            :product="product"
-            @addToCart="cartStore.addItems($event, product)"
-          />
+          <transition-group appear name="fade-slide" mode="out-in">
+            <ProductList
+              v-for="(product, index) in paginatedOrders"
+              :key="index"
+              :product="product"
+              @addToCart="cartStore.addItems($event, product)"
+            />
+          </transition-group>
         </div>
         <div class="text-center" v-if="productStore.filterText !== ''">
           <button
